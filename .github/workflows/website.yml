@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@ds-test
 
     - name: Use Node.js
       uses: actions/setup-node@v1
@@ -21,5 +21,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v2.4.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PUBLISH_BRANCH: asf-site
+        PUBLISH_BRANCH: master
         PUBLISH_DIR: ./dist
