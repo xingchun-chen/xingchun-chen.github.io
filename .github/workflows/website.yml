@@ -18,10 +18,11 @@ jobs:
         node-version: 8.16.2
     - name: Build
       run: |
-        mkdir dist && npm install && npm run build && cp -r baidu_verify_*.html googleff48c3fa45891a20.html sitemap.xml 404.html .asf.yaml index.html en-us zh-cn build img download .nojekyll .github/workflows .docsite dist/
+        mkdir dist && npm install && npm run build && cp -r baidu_verify_*.html googleff48c3fa45891a20.html sitemap.xml 404.html .asf.yaml index.html en-us zh-cn build img download .nojekyll .github .docsite dist/
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2.4.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        EXTERNAL_REPOSITORY: username/external-repository
         PUBLISH_BRANCH: master
         PUBLISH_DIR: ./dist
