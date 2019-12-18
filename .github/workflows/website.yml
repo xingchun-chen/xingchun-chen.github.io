@@ -1,16 +1,16 @@
 name: Build and Deploy
 
-on:
-  push:
-    branches:
-    - ds-test
+on: push
+#   push:
+#     branches:
+#     - ds-test
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@ds-test
 
     - name: Use Node.js
       uses: actions/setup-node@v1
