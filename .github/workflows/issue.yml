@@ -11,5 +11,5 @@ jobs:
     steps:
     - uses: ben-z/actions-comment-on-issue@1.0.2
       with:
-        message: "Gentle reminder:\n* Did you go through all of the troubleshooting steps outlined in README.md?"
+        message: "Hi:\n*Thank you for your feedback, we have received your issue and please be patient to get responded.\n*In order to let us know your request as soon as possible, please provide detailed information、version or pictures\n*If you haven't received a reply for a long time, you can subscribe to the developer's email https://dolphinscheduler.apache.org/zh-cn/community/development/subscribe.html , send questions to dev@dolphinscheduler.apache.org"
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
