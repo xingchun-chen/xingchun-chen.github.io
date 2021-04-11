@@ -2,7 +2,7 @@ name: issue-checklist
 
 on:
   issues:
-    types: [opened]
+    types: [opened,issue_comment]
   pull_request:
     types: [opened]
   project_card:
@@ -34,7 +34,17 @@ jobs:
         with:
           add-labels: "Waiting for reply, bug"
           ignore-if-labeled: true
-          remove-labels: "Waiting for reply"
+          remove-labels: "test"
+          
+  remove_label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-ecosystem/action-remove-labels@v1
+        if: ${{ startsWith(github.event.comment.body, '/remove-labels') }}
+        with:
+          github_token: ${{ secrets.github_token }}
+          labels: bug
     
   labelTopIssues:
     name: Label Top Issues
