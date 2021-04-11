@@ -31,6 +31,7 @@ jobs:
         uses: andymckay/labeler@master
         with:
           add-labels: "Waiting for reply, bug"
-          remove-labels: "in progress"
+          ignore-if-labeled: true
+          remove-labels: "Waiting for reply"
           
   
