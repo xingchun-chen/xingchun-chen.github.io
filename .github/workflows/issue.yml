@@ -41,7 +41,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions-ecosystem/action-remove-labels@v1
-        if: ${{ github.event.comment.author_association }}.search("NONE") = -1
+        if: ${{ github.event.comment.author_association }}.search("NONE") != -1 
         with:
           github_token: ${{ secrets.github_token }}
           labels: bug
