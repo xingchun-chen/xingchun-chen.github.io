@@ -2,13 +2,13 @@ name: issue-checklist
 
 on:
   issues:
-    types: [opened,issue_comment]
+    types: [opened, issue_comment]
   pull_request:
     types: [opened]
   project_card:
     types: [moved]
   schedule:
-  - cron:  '15 * * * * ? *'
+  - cron:  '* * * * *'
 
 
 jobs:
