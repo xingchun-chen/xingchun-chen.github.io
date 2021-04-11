@@ -2,7 +2,7 @@ name: issue-checklist
 
 on:
   issues:
-    types: [opened]
+    types: [issue_comment]
   pull_request:
     types: [opened]
   project_card:
