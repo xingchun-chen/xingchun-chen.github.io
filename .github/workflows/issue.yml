@@ -3,6 +3,9 @@ name: issue-checklist
 on:
   issues:
     types: [opened]
+  pull_request_target:
+    types: [opened]
+
 
 jobs:
   comment:
@@ -25,3 +28,8 @@ jobs:
             Waiting for reply
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions-cool/translation-helper@v1.1.1
