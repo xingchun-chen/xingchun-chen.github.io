@@ -2,7 +2,7 @@ name: issue-checklist
 
 on:
   issues:
-    types: [issue_comment]
+    types: [opened,issue_comment]
   pull_request:
     types: [opened]
   project_card:
@@ -41,7 +41,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions-ecosystem/action-remove-labels@v1
-        if: ${{ github.event.issue.number }}
+        if: ${{ github.event.comment.number }}>1
         with:
           github_token: ${{ secrets.github_token }}
           labels: bug
