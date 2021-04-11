@@ -8,7 +8,7 @@ on:
   project_card:
     types: [moved]
   schedule:
-  - cron:  '15 * * * *'
+  - cron:  '15 * * * * ? *'
 
 
 jobs:
