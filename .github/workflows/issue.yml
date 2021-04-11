@@ -3,7 +3,7 @@ name: issue-checklist
 on:
   issues:
     types: [opened]
-  pull_request_target:
+  pull_request:
     types: [opened]
 
 
@@ -17,6 +17,11 @@ jobs:
         message: "Hi:\n* Thank you for your feedback, we have received your issue, Please wait patiently for a reply.\n* In order to let us know your request as soon as possible, please provide detailed information、version or pictures.\n* If you haven't received a reply for a long time, you can subscribe to the developer's email，Mail subscription steps reference https://dolphinscheduler.apache.org/zh-cn/community/development/subscribe.html ,then send questions to dev@dolphinscheduler.apache.org."
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions-cool/translation-helper@v1.1.1
+      
   add-label:
     name: Add Label
     runs-on: ubuntu-latest
@@ -29,7 +34,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
-  translate:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions-cool/translation-helper@v1.1.1
+  
