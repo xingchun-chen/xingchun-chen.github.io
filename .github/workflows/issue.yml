@@ -41,7 +41,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions-ecosystem/action-remove-labels@v1
-        if: ${{ github.event.comment.type }}.match('User')
+        if: (!${{ github.event.comment.type }}.match('Bot'))
         with:
           github_token: ${{ secrets.github_token }}
           labels: bug
