@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions-cool/translation-helper@v1.1.1
-      
+
   automate-issues-labels:
     runs-on: ubuntu-latest
     steps:
