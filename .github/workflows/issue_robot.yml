@@ -23,9 +23,8 @@ jobs:
   automate-issues-labels:
     runs-on: ubuntu-latest
     steps:
-      - name: initial labeling
-        - uses: actions/checkout@v2
-        - uses: ./.github/actions/lable-on-issue@1.0.2
-          with:
-            add-labels: "Waiting for reply"
-            ignore-if-labeled: true
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/lable-on-issue@1.0.2
+        with:
+          add-labels: "Waiting for reply"
+          ignore-if-labeled: true
