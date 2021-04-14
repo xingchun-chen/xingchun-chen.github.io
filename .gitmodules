@@ -1,0 +1,21 @@
+[submodule ".github/action"]
+	path = .github/action
+	url = https://github.com/xingchun-chen/actions-comment-on-issue
+[submodule ".github/actions/comment-on-issue"]
+	path = .github/actions/comment-on-issue
+	url = https://github.com/ben-z/actions-comment-on-issue
+[submodule ".github/actions/translation-on-issue"]
+	path = .github/actions/translation-on-issue
+	url = https://github.com/actions-cool/translation-helper
+[submodule ".github/actions/lable-on-issue"]
+	path = .github/actions/lable-on-issue
+	url = https://github.com/andymckay/labeler
+[submodule ".github/actions/comment-on-issue@1.0.2"]
+	path = .github/actions/comment-on-issue@1.0.2
+	url = https://github.com/xingchun-chen/actions-comment-on-issue
+[submodule ".github/actions/lable-on-issue@1.0.2"]
+	path = .github/actions/lable-on-issue@1.0.2
+	url = https://github.com/xingchun-chen/labeler
+[submodule ".github/actions/translation-on-issue@1.1.1"]
+	path = .github/actions/translation-on-issue@1.1.1
+	url = https://github.com/xingchun-chen/translation-helper
