@@ -2,3 +2,6 @@
 [submodule ".github/actions/comment"]
 	path = .github/actions/comment
 	url = https://github.com/xingchun-chen/actions-comment-on-issue
+[submodule ".github/actions/translate"]
+	path = .github/actions/translate
+	url = https://github.com/xingchun-chen/translation-helper

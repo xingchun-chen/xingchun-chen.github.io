@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "translation on issue"
-        uses: ./.github/actions/translation-on-issue
+        uses: ./.github/actions/translate
 
   automate-issues-labels:
     runs-on: ubuntu-latest
