@@ -1,1 +1,4 @@
 
+[submodule ".github/actions/comment"]
+	path = .github/actions/comment
+	url = https://github.com/xingchun-chen/actions-comment-on-issue
