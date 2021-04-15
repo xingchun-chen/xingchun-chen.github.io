@@ -1,4 +1,1 @@
-[submodule ".github/action/comment-on-issue"]
-	path = .github/actions/comment-on-issue
-	url = https://github.com/ben-z/actions-comment-on-issue
 
