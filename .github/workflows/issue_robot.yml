@@ -5,7 +5,7 @@ on:
     types: [opened]
 
 jobs:
-  comment:
+  issueRobot:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout ${{ github.ref }}"
@@ -14,16 +14,16 @@ jobs:
           persist-credentials: false
           submodules: recursive
 
-      - name: "translation on issue"
+      - name: "Translation into English in issue"
         uses: ./.github/actions/translate
 
-      - name: "comment on issue"
+      - name: "Comment in issue"
         uses: ./.github/actions/comment
         with:
-          message: "Hi:\n* Thank you for your feedback, we have received your issue, Please wait patiently for a reply.\n* In order to let us know your request as soon as possible, please provide detailed information、version or pictures.\n* If you haven't received a reply for a long time, you can subscribe to the developer's email，Mail subscription steps reference https://dolphinscheduler.apache.org/zh-cn/community/development/subscribe.html ,then send questions to dev@dolphinscheduler.apache.org."
+          message: "Hi:\n* Thank you for your feedback, we have received your issue, Please wait patiently for a reply.\n* In order to let us know your request as soon as possible, please provide detailed information、version or pictures.\n* If you haven't received a reply for a long time, you can subscribe to the developer's email，Mail subscription steps reference https://dolphinscheduler.apache.org/zh-cn/community/development/subscribe.html ,Then write the issue URL in the email content and send question to dev@dolphinscheduler.apache.org."
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: "add lable on issue"
+      - name: "Add lable in issue"
         uses: ./.github/actions/lable-on-issue
         with:
           add-labels: "Waiting for reply"
