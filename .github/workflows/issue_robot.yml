@@ -8,6 +8,12 @@ jobs:
   comment:
     runs-on: ubuntu-latest
     steps:
+      - name: "Checkout ${{ github.ref }} ( ${{ github.sha }} )"
+        uses: actions/checkout@v2
+          with:
+            persist-credentials: false
+            submodules: recursive
+
       - name: "comment on issue"
         uses: ./.github/actions/comment
         with:
@@ -17,11 +23,9 @@ jobs:
   autoTranslate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
       - name: "translation on issue"
         uses: ./.github/actions/translate
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+
 
   automate-issues-labels:
     runs-on: ubuntu-latest
